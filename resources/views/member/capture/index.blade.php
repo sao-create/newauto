@@ -1,16 +1,29 @@
 @extends('layouts.common')
 @section('content')
-<div class="indexmain">
+<div class="container">
+ <div class="row">
     <h2>攻略一覧</h2>
-    <a href="{{ action('Member\BosyuController@add') }}" role="button" class="btn btn-primary">新規作成</a>
-    <input type="submit" class="btn btn-primary" value="検索">
- 　　<div class="indextable">
-      <li>ID</li>
-      <li>タイトル</li>
-      <li>ランク</li>
-      <li>本文</li>
-      <li>画像</li>
-    </div>
-
-</div>
-@endsection
+ </div>
+ <div class="row">
+          <div class="col-md-4 p-5">
+              <a href="{{ action('Member\CaptureController@add') }}" role="button" class="btn btn-primary">新規作成</a>
+          </div>
+      </div>
+      <div class="row">
+          <div class="list-news col-md-12 mx-auto">
+              <div class="row">
+                @foreach($posts as $capture)
+                    <article class="col-md-5 mx-auto border p-3 mb-5">
+                        <h2>{{ $capture->title, 100 }}</h2>
+                        <p class="capture_image">
+                          @if ($capture->image_path)
+                             <img src="{{ asset('storage/image/' . $capture->image_path) }}" class="img-responsive">
+                          @endif
+                        </p>
+                        <p>{!! nl2br(e(str_limit($capture->body, 200))) !!}
+                          <a href="{{ action('Member\CaptureController@show', ['capture' => $capture]) }}" role="button" class="btn btn-default　btn-xs">
+                            <i class="fas fa-angle-double-right"></i>
+                          </a>
+                        </p>
+                    </article>
+                @endforeach

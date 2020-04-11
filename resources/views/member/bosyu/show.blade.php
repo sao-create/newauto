@@ -3,14 +3,13 @@
 
 @section('content')
 <div class="mb-4 text-right">
-    <a class="btn btn-primary" href="{{ action('Member\BosyuController@edit', ['bosyu' => $bosyu]) }}">
+    <a class="btn btn-primary" href="{{ action('Member\BosyuController@edit', ['id' => $bosyu->id]) }}">
         編集する
     </a>
     <form
-    style="display: inline-block;"
-    method="POST"
-    action="{{ action('Member\BosyuController@delete', ['bosyu' => $bosyu]) }}"
->
+        style="display: inline-block;"
+        method="POST"
+        action="{{ action('Member\BosyuController@delete', ['id' => $bosyu->id]) }}">
     @csrf
     @method('DELETE')
 
@@ -36,27 +35,23 @@
     <input
         name="bosyu_id"
         type="hidden"
-        value="{{ $bosyu->id }}"
-    >
-
+        value="{{ $bosyu->id }}">
     <div class="form-group">
         <label for="body">
             本文
         </label>
-
         <textarea
             id="body"
             name="body"
             class="form-control {{ $errors->has('body') ? 'is-invalid' : '' }}"
-            rows="4"
-        >{{ old('body') }}</textarea>
+            rows="4">{{ old('body') }}
+        </textarea>
         @if ($errors->has('body'))
             <div class="invalid-feedback">
                 {{ $errors->first('body') }}
             </div>
         @endif
     </div>
-
     <div class="mt-4">
         <button type="submit" class="btn btn-primary btn-xs">
             コメントする

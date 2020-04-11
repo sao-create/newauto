@@ -25,10 +25,7 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         {{-- この章の後半で作成するCSSを読み込みます --}}
         <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
-
         <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-
-
     </head>
     <body>
     　　<div id="wrapper">
@@ -43,6 +40,5 @@
             </footer>
           </div>
         </div>
-
     </body>
 </html>

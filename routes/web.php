@@ -35,23 +35,13 @@ Route::group(['prefix' => 'member'], function() {
     Route::post('capture/edit', 'Member\CaptureController@update');
     Route::get('capture', 'Member\CaptureController@index')->middleware('auth');
     Route::get('capture/delete', 'Member\CaptureController@delete')->middleware('auth');
+    Route::get('/show/{id}', 'Member\CaptureController@show')->middleware('auth');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', 'BosyuController@index');
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('comments', 'CommentsController')->middleware('auth');

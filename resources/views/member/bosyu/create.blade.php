@@ -22,11 +22,12 @@
                     @endif
                     <div class="BosyuForm">
                         <div class="form-group row">
-                            <label class=BosyuTitle><i class="far fa-caret-square-right fa-2x"></i><span class="mgr-10">タイトル</span></label>
+                            <label class="BosyuTitle"><i class="far fa-caret-square-right fa-2x"></i><span class="mgr-10">タイトル</span></label>
                             <div class="TitleSet">
                                 <input type="text"  class="titleform" name="title" value="{{ old('title') }}">
                             </div>
                         </div>
+
                         <div class="form-group row">
                             <label class="BosyuRank"><i class="far fa-caret-square-right fa-2x"></i><span class="mgr-10">ランク</span></label>
                             <div class="RankSet">
@@ -88,20 +89,24 @@
                             </select>
                             </div>
                             </div>
+
                             <div class="form-group row">
-                                <lavel class="BosyuCode"><i class="far fa-caret-square-right fa-2x"></i><span class="mgr-10">フレンドコード</span></lavel>
+                                <label class="BosyuCode"><i class="far fa-caret-square-right fa-2x"></i><span class="mgr-10">フレンドコード</span></label>
                                 <input type="text" class="codeform" name="code" value="{{ old('code') }}">
                             </div>
+
                             <div class="form-group row">
                                 <label class="BosyuMain"><i class="far fa-caret-square-right fa-2x"></i><span class="mgr-10">本文</span></label>
                                 <div class="MainSet">
                                     <textarea class="bodyform" name="body" rows="20"></textarea>
                                 </div>
                             </div>
+
                             {{ csrf_field() }}
                             <input type="submit" class="btn btn-primary" value="募集する">
-                </form>
+                
                     </div>
+              </form>      
             </div>
         </div>
 </div>

@@ -97,13 +97,10 @@ class BosyuController extends Controller
         return view('bosyu.index', ['posts' => $posts]);
     }
 
-    public function show($bosyu_id)
+    public function show(Request $request)
     {
-        $bosyu = Bosyu::find($bosyu_id);
+        $bosyu = Bosyu::find($request->id);
         
-        return view('member.bosyu.show',[
-            'bosyu' => $bosyu,
-        ]);
+        return view('member.bosyu.show',['bosyu' => $bosyu]);
     }
-
 }
