@@ -31,7 +31,7 @@
     　　<div id="wrapper">
           <div id="container">
             @include('parts.nav')
-            <main class="py-4">
+            <main>
                         {{-- コンテンツをここに入れるため、@yieldで空けておきます。 --}}
                         @yield('content')
             </main>

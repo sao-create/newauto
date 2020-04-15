@@ -64,8 +64,7 @@ class CaptureController extends Controller
         $capture = Capture::find($capture_id);
         
         return view('member.capture.show',[
-            'capture' => $capture,
-        ]);
+            'capture' => $capture]);
     }
 }
 

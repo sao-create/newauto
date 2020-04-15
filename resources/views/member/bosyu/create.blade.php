@@ -9,7 +9,7 @@
 @section('content')
 <div class="container">
         <div class="row">
-                <h2>メンバー募集新規作成</h2>
+                <h2 class="bosyu-create"><i class="fas fa-dragon"></i>&nbsp;メンバー募集新規作成</h2>
                 <div class="BosyuCreate">
                 <form action="{{ action('Member\BosyuController@create') }}" method="post" enctype="multipart/form-data">
 

@@ -23,7 +23,7 @@ Route::group(['prefix' => 'member'], function() {
     Route::post('bosyu/edit', 'Member\BosyuController@update')->middleware('auth');
     Route::get('bosyu/index', 'Member\BosyuController@index');
     Route::get('bosyu/delete', 'Member\BosyuController@delete')->middleware('auth');
-    Route::get('/show/{id}', 'Member\BosyuController@show')->middleware('auth');
+    Route::get('/content/{id}', 'Member\BosyuController@content')->middleware('auth');
 
     
 });
@@ -35,7 +35,7 @@ Route::group(['prefix' => 'member'], function() {
     Route::post('capture/edit', 'Member\CaptureController@update');
     Route::get('capture', 'Member\CaptureController@index')->middleware('auth');
     Route::get('capture/delete', 'Member\CaptureController@delete')->middleware('auth');
-    Route::get('/show/{id}', 'Member\CaptureController@show')->middleware('auth');
+    Route::get('/page/{id}', 'Member\CaptureController@show')->middleware('auth');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');

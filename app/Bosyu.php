@@ -9,6 +9,7 @@ class Bosyu extends Model
     //
     public $timestamps = false;
     
+    
     protected $table ="bosyu";
     protected $guarded = array('id');
 

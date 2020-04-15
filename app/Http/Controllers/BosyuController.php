@@ -12,6 +12,5 @@ class BosyuController extends Controller
 
         return view('parts.top');
     }
-    
 }
 

@@ -13,8 +13,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    <p>You are logged in!</p>
+                    <p>ログイン成功！</p>
+                    <p>ページ上部からトップへ戻ります。</p>
                 </div>
             </div>
         </div>

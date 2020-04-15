@@ -4,7 +4,7 @@
 @section('content')
 <div class="container">
   <div class="row">
-   <h2>攻略記事新規作成</h1>
+   <h2 class="capture-create"><i class="fas fa-dragon"></i>&nbsp;攻略記事新規作成</h1>
 
      <div class="col-md-8 mx-auto">
        <form action="{{ action('Member\CaptureController@create') }}" method="post" enctype="multipart/form-data">
@@ -39,7 +39,7 @@
 
          {{ csrf_field() }}
 
-         <input type="submit" class="btn btn-primary" value="投稿する">
+         <input type="submit" class="btn btn-primary mb-3" value="投稿する">
 　　　  </form>
     </div>
 

@@ -80,6 +80,11 @@ class BosyuController extends Controller
         return view('member.bosyu.index',['posts' => $posts, 'cond_title' => $cond_title]);
     }
 
+    public function content(Request $request)
+    {
+        $bosyu = Bosyu::find($request->id);
+        return view('member.bosyu.content',['bosyu' => $bosyu]);
+    }
 
     public function delete(Request $request)
     {
@@ -95,12 +100,5 @@ class BosyuController extends Controller
         $posts = Post::orderBy('created_at', 'desc')->get();
 
         return view('bosyu.index', ['posts' => $posts]);
-    }
-
-    public function show(Request $request)
-    {
-        $bosyu = Bosyu::find($request->id);
-        
-        return view('member.bosyu.show',['bosyu' => $bosyu]);
     }
 }
