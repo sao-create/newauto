@@ -45,3 +45,5 @@ Auth::routes();
 Route::get('/', 'BosyuController@index');
 
 Route::resource('comments', 'CommentsController')->middleware('auth');
+
+Route::get('/register', 'HomeController@add');

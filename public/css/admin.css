@@ -356,6 +356,10 @@ textarea {
   color: #000;
 }
 
+.card-body2 {
+  color: #000;
+}
+
 /*page.blade.php------------------*/
 .bosyu-page {
   margin-top: 100px;
