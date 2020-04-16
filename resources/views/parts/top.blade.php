@@ -32,7 +32,7 @@
     <h4>ようこそゲストさん</h4>
     <p>記事の投稿には会員登録が必要です</p>
     <div class="button">
-      <button class="topbutton"　href="{{ action('HomeController@add') }}">
+      <button class="topbutton"　href="{{ action('RegisterController@create') }}">
           　新規登録
       </button>
     </div>
