@@ -31,6 +31,11 @@
     <br>
     <h4>ようこそゲストさん</h4>
     <p>記事の投稿には会員登録が必要です</p>
+    <div class="button">
+      <button type="submit" class="topbutton"　href="{{ route('register') }}">
+          　新規登録
+      </button>
+    </div>
   </div>
   </div>
 @endsection
