@@ -45,5 +45,7 @@ Auth::routes();
 Route::get('/', 'BosyuController@index');
 
 Route::resource('comments', 'CommentsController')->middleware('auth');
+Route::get('comments', 'CommentsController@store')->middleware('auth');
+Route::post('comments', 'CommentsController@store')->middleware('auth');
 
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');

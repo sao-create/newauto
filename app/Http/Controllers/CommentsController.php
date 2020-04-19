@@ -18,6 +18,6 @@ class CommentsController extends Controller
         $bosyu = Bosyu::findOrFail($params['bosyu_id']);
         $bosyu->comments()->create($params);
 
-        return redirect()->route('member.bosyu.show', ['bosyu' => $bosyu]);
+        return view('member.bosyu.content', ['bosyu' => $bosyu]);
     }
 }

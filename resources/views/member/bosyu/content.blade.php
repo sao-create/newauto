@@ -26,7 +26,7 @@
                 {!! nl2br(e($bosyu->body)) !!}
             </p>
       
-         <form class="mb-4" method="POST" action="{{ route('comments.store') }}">
+         <form class="mb-4" method="POST" href="{{ action('CommentsController@store', ['id' => $bosyu->id]) }}>
          @csrf
          <input name="bosyu_id" type="hidden" value="{{ $bosyu->id }}">
             <div class="form-group">
@@ -44,7 +44,9 @@
                 @endif
             </div>
            <div class="mt-4">
-             <button type="submit" class="comments btn btn-primary mb-3">コメントする</button>
+             <button type="submit" class="comments btn btn-primary mb-3">
+               <a href="{{ action('CommentsController@store') }}">コメントする</a>
+             </button>
            </div>
 
             <section>

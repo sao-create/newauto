@@ -17,7 +17,7 @@
                         <h2>{{ $capture->title, 100 }}</h2>
                         <p class="capture_image">
                           @if ($capture->image_path)
-                             <img src="{{ asset( $capture->image_path ) }}" class="img-responsive">
+                             <img src="{{ $capture->image_path }}" class="img-responsive">
                           @endif
                         </p>
                         <p class="capturebody text-left">{!! nl2br(e(str_limit($capture->body, 200))) !!}
