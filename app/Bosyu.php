@@ -16,6 +16,8 @@ class Bosyu extends Model
     protected $fillable = [
         'title',
         'body',
+        'rank',
+        'code',
     ];
 
 

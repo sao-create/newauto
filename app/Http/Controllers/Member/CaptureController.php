@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Member;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Capture;
+use Storage; //追加
 
 class CaptureController extends Controller
 {
@@ -22,8 +23,8 @@ class CaptureController extends Controller
         $form = $request->all();
 
         if (isset($form['image'])) {
-            $path = $request->file('image')->store('public/image');
-            $capture->image_path = basename($path);
+            $path = Storage::disk('s3')->putFile('/',$form['image'],'public');
+            $capture->image_path = Storage::disk('s3')->url($path);
         } else {
             $capture->image_path = null;
         }
