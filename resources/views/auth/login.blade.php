@@ -49,7 +49,7 @@
                                 </div>
                                 <div class="col-md-8 offset-md-4">
                                     <button type="submit" class="btn btn-primary">
-                                    <a href="{{ route('auth.login') }}">
+                                    <a href="{{ route('login') }}">
                                         {{ __('messages.Login') }}</a>
                                     </button>
                                 </div>
