@@ -32,8 +32,7 @@
     <h4>ようこそゲストさん</h4>
     <p>記事の投稿には会員登録が必要です</p>
     <div class="button">
-      <button class="topbutton"　href="{{ action('RegisterController@create') }}">
-          　新規登録
+      <a href="{{ route('register') }}"><p class="topbutton"><i class="far fa-clipboard"></i>新規登録</p></a>
       </button>
     </div>
   </div>
