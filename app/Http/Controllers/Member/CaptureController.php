@@ -20,20 +20,20 @@ class CaptureController extends Controller
         $this->validate($request, Capture::$rules);
 
         $capture = new Capture;
-        $form = $request->all();
+        $capture_form = $request->all();
 
-        if (isset($form['image'])) {
-            $path = Storage::disk('s3')->putFile('/',$form['image'],'public');
+        if (isset($capture_form['image'])) {
+            $path = Storage::disk('s3')->putFile('/',$capture_form['image'],'public');
             $capture->image_path = Storage::disk('s3')->url($path);
         } else {
             $capture->image_path = null;
         }
         // フォームから送信されてきた_tokenを削除する
-        unset($form['_token']);
+        unset($capture_form['_token']);
         // フォームから送信されてきたimageを削除する
-        unset($form['image']);
+        unset($capture_form['image']);
         // データベースに保存する
-        $capture->fill($form);
+        $capture->fill($capture_form);
         $capture->save();        
 
         return redirect('member/capture');
