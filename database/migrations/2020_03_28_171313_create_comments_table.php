@@ -18,10 +18,8 @@ class CreateCommentsTable extends Migration
             $table->increments('id');
             $table->unsignedBigInteger('bosyu_id');
             $table->text('body');
- 
             $table->timestamps();
             $table->foreign('bosyu_id')->references('id')->on('bosyu');
- 
         });
     }
 

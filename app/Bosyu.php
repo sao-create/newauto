@@ -9,7 +9,6 @@ class Bosyu extends Model
     //
     public $timestamps = false;
     
-    
     protected $table ="bosyu";
     protected $guarded = array('id');
 
@@ -19,8 +18,6 @@ class Bosyu extends Model
         'rank',
         'code',
     ];
-
-
 
     // 以下を追記
     public static $rules = array(
@@ -38,8 +35,6 @@ class Bosyu extends Model
     {
         return $this->hasMany('App\Comment');
     }
-
-    
 }
 
 

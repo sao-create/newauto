@@ -32,8 +32,8 @@
           <div id="container">
             @include('parts.nav')
             <main>
-                        {{-- コンテンツをここに入れるため、@yieldで空けておきます。 --}}
-                        @yield('content')
+              {{-- コンテンツをここに入れるため、@yieldで空けておきます。 --}}
+              @yield('content')
             </main>
             <footer>
               <p>COPYRIGHT &#169; ATTACK AUTO CHESS ALL RIGHTS RESERVED.</p>

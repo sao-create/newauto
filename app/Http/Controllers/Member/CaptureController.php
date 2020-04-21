@@ -21,7 +21,6 @@ class CaptureController extends Controller
 
         $capture = new Capture;
         $capture_form = $request->all();
-
         
         // フォームから送信されてきた_tokenを削除する
         unset($capture_form['_token']);

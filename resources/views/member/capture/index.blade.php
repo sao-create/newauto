@@ -22,4 +22,7 @@
                         </p>
                     </article>
                 @endforeach
+              </div>
+          </div>
+      </div>
 @endsection

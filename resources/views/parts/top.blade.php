@@ -25,7 +25,6 @@
       </div>
     </div>
   </div>  
-  </div>
 </div>
   <div class="guest">
     <br>
@@ -35,7 +34,6 @@
       <a href="{{ route('register') }}"><p class="topbutton"><i class="far fa-clipboard"></i>新規登録</p></a>
       </button>
     </div>
-  </div>
   </div>
 @endsection
 
