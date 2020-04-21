@@ -15,12 +15,8 @@
                 @foreach($posts as $capture)
                     <article class="col-md-5 mx-auto border p-3 mb-5">
                         <h2>{{ $capture->title, 100 }}</h2>
-                        <p class="capture_image">
-                          @if ($capture->image_path)
-                             <img src="{{ $capture->image_path }}" class="img-responsive">
-                          @endif
-                        </p>
                         <p class="capturebody text-left">{!! nl2br(e(str_limit($capture->body, 200))) !!}
+                          <a href="{{ action('Member\CaptureController@show',['capture' => $capture]) }}" role="button" class="btn btn-default　btn-xs">
                             <i class="fas fa-angle-double-right"></i>
                           </a>
                         </p>

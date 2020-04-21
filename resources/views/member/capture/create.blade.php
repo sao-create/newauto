@@ -30,13 +30,6 @@
             </div>
          </div>
 
-         <div class="form-group row">
-           <lavel class="col-md-2">画像</lavel>
-           <div class="col-md-10">
-             <input type="file" class="form-control-file" name="image">
-           </div>
-         </div>
-
          {{ csrf_field() }}
 
          <input type="submit" class="btn btn-primary mb-3" value="投稿する">

@@ -328,10 +328,6 @@ textarea {
 }
 
 /*index.blade.php-------------------*/ 
-.capture_image {
-  width: 50%;
-  height: 50%;
-}
 
 .my-white {
   color: #fff;
@@ -367,9 +363,6 @@ textarea {
 }
 
 /*capture.index-------------------*/
-.capturebody {
-  margin-top: 80px;
-}
 
 .capture-create {
   border-bottom: 1px solid #fff;

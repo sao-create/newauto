@@ -4,22 +4,19 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCaptureTable extends Migration
+class CreateHistoriesTable extends Migration
 {
     /**
      * Run the migrations.
      *
      * @return void
      */
-
-    protected $table = 'capture';
-
     public function up()
     {
-        Schema::create('capture', function (Blueprint $table) {
+        Schema::create('histories', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
-            $table->string('body');
+            $table->integer('bosyu_id');
+            $table->string('edited_at');
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ class CreateCaptureTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('capture');
+        Schema::dropIfExists('histories');
     }
 }
