@@ -32,9 +32,13 @@ class CaptureController extends Controller
         return redirect('member/capture');
     }
 
-    public function edit()
+    public function edit(Request $request)
     {
-        return view('member.capture.edit');
+        $capture = Capture::find($request->id);
+        if (empty($capture)) {
+            abort(404);
+        }
+        return view('member.capture.edit',['capture_form' => $capture]);
     }
 
     public function update()
@@ -60,5 +64,14 @@ class CaptureController extends Controller
         return view('member.capture.show',[
             'capture' => $capture]);
     }
+
+    public function delete(Request $request)
+    {
+        // 該当するNews Modelを取得
+        $capture = capture::find($request->id);
+        // 削除する
+        $capture->delete();
+        return redirect('member/capture/index');
+    }  
 }
 

@@ -44,7 +44,7 @@ class BosyuController extends Controller
         if (empty($bosyu)) {
             abort(404);
         }
-        return view('member.bosyu.edit',['bosyu_form' => $bosyu]);
+        return view('member/bosyu/edit',['bosyu_form' => $bosyu]);
     }
 
     public function update(Request $request)
